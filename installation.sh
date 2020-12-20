@@ -1,4 +1,4 @@
 
 
 
-sudo curl –L https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname –s)-$(uname –m) –o /usr/local/bin/docker-compose
+sudo curl -s https://api.github.com/repos/docker/compose/releases/latest | grep browser_download_url | grep docker-compose-Linux-x86_64 | cut -d '"' -f 4 | wget -qi -
